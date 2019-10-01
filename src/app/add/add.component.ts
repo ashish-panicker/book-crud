@@ -27,7 +27,7 @@ export class AddComponent implements OnInit {
     this.newBook = new Book(this.id, this.author, this.title, this.price);
     console.log(this.newBook);
     this.svc.create(this.newBook);
-
+    
   }
 
 }
