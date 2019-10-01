@@ -23,11 +23,16 @@ export class AddComponent implements OnInit {
   }
 
   createBook() {
-    ++this.id;
     this.newBook = new Book(this.id, this.author, this.title, this.price);
     console.log(this.newBook);
     this.svc.create(this.newBook);
-    
+    this.reset();
+  }
+
+  reset(){
+    this.author ="";
+    this.title = "";
+    this.price = 0;
   }
 
 }

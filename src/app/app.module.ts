@@ -8,6 +8,7 @@ import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { AddComponent } from './add/add.component';
 import { ListComponent } from './list/list.component';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ListComponent } from './list/list.component';
     NavComponent,
     HomeComponent,
     AddComponent,
-    ListComponent
+    ListComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
