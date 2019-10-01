@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { AddComponent } from './add/add.component';
 import { ListComponent } from './list/list.component';
 import { EditComponent } from './edit/edit.component';
+import { DeleteComponent } from './delete/delete.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { EditComponent } from './edit/edit.component';
     HomeComponent,
     AddComponent,
     ListComponent,
-    EditComponent
+    EditComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,
