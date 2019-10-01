@@ -11,8 +11,8 @@ const routes: Routes = [
   {path:'', pathMatch:'full', component:HomeComponent},
   {path:'add', component: AddComponent},
   {path:'list', component:ListComponent},
-  {path:'list/edit/:id', component:EditComponent},
-  {path:'list/delete/:id', component:DeleteComponent}
+  {path:'edit/:id', component:EditComponent},
+  {path:'delete/:id', component:DeleteComponent}
 ];
 
 @NgModule({

@@ -11,17 +11,21 @@ import { ActivatedRoute } from '@angular/router';
 export class EditComponent implements OnInit {
 
   book: Book;
+  bookId:number;
+
   constructor(private svc: DataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.book = this.svc.books[parseInt(this.route.snapshot.paramMap.get('id')) - 1];
+    this.bookId = parseInt(this.route.snapshot.paramMap.get('id'));
+    this.svc.books.forEach(element => {
+      if(element.id == this.bookId){
+        this.book = element;
+      }
+    });
   }
 
   editBook() {
     this.svc.books[this.svc.books.indexOf(this.book)] = this.book;
-    console.log(this.route.snapshot.firstChild);
-    console.log(this.route.snapshot.data);
-    console.log(this.route.snapshot.paramMap.keys);
   }
 
 }
