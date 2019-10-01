@@ -8,25 +8,14 @@
         <th scope="col">Price</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+    <tbody *ngIf="books.length > 0">
+      <tr *ngFor="let book of books">
+        <th scope="row"> {{book.id}} </th>
+        <td> {{book.title}} </td>
+        <td> {{book.author}} </td>
+        <td> {{book.price}} </td>
       </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
+      
     </tbody>
   </table>
 </div>

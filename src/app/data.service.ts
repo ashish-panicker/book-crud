@@ -1,14 +1,18 @@
 import { Injectable } from '@angular/core';
-import {Book} from './book';
+import { Book } from './book';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  books:Book[] = [];
+  books: Book[] = [];
 
   constructor() { }
+
+  create(b: Book) {
+    this.books.push(b);
+  }
 
 
 }

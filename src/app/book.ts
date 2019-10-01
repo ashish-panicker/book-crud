@@ -5,7 +5,7 @@ export class Book {
     title: string;
     price: number;
 
-    constructor(id, author, title, price) {
+    constructor(id:number, author:string, title:string, price:number) {
         this.id = id;
         this.author = author;
         this.title = title;
